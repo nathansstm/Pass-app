@@ -157,7 +157,7 @@ Ensure that `package.json` has:
 ### 8. Use these Webpack Development Server Settings:
 Ensure that `webpack.config.js` has host set correctly:
 
-```json
+```javascript
   devServer: {
     port: '5000',
     host: 'yourhost.domain.com',
@@ -165,13 +165,11 @@ Ensure that `webpack.config.js` has host set correctly:
     static: {
       directory: path.join(__dirname, 'public'),
     }
-  },
 ```
 ### 9. Use these Webpack Proxy Settings:
 Ensure that `webpack.config.js` uses the correct route prefix and port for the webhooks proxy:
 
-```json
-  {
+```javascript
     proxy: [
       {
         context: ['/api'],
@@ -180,7 +178,6 @@ Ensure that `webpack.config.js` uses the correct route prefix and port for the w
         secure: false, // For non-HTTPS, set to false
       },
     ]
-  },
 ```
 
 ### 10. Create the backend for webhooks:
