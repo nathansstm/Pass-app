@@ -165,11 +165,13 @@ Ensure that `webpack.config.js` has host set correctly:
     static: {
       directory: path.join(__dirname, 'public'),
     }
+  },
 ```
 ### 9. Use these Webpack Proxy Settings:
 Ensure that `webpack.config.js` uses the correct route prefix and port for the webhooks proxy:
 
 ```json
+  {
     proxy: [
       {
         context: ['/api'],
@@ -178,6 +180,7 @@ Ensure that `webpack.config.js` uses the correct route prefix and port for the w
         secure: false, // For non-HTTPS, set to false
       },
     ]
+  },
 ```
 
 ### 10. Create the backend for webhooks:
@@ -241,6 +244,7 @@ The use of Webpack's `devServer` allows for live reloading on port 5000, and the
 ## License
 
 This project is licensed under the MIT License.
+
 
 
 
